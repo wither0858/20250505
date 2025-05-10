@@ -80,6 +80,36 @@ function draw() {
           line(keypoint1.x, keypoint1.y, keypoint2.x, keypoint2.y);
         }
 
+        // Draw lines connecting keypoints 13 to 16
+        for (let i = 13; i < 16; i++) {
+          let keypoint1 = hand.keypoints[i];
+          let keypoint2 = hand.keypoints[i + 1];
+
+          if (hand.handedness == "Left") {
+            stroke(255, 0, 255); // Pink for left hand
+          } else {
+            stroke(255, 255, 0); // Yellow for right hand
+          }
+
+          strokeWeight(4);
+          line(keypoint1.x, keypoint1.y, keypoint2.x, keypoint2.y);
+        }
+
+        // Draw lines connecting keypoints 17 to 20
+        for (let i = 17; i < 20; i++) {
+          let keypoint1 = hand.keypoints[i];
+          let keypoint2 = hand.keypoints[i + 1];
+
+          if (hand.handedness == "Left") {
+            stroke(255, 0, 255); // Pink for left hand
+          } else {
+            stroke(255, 255, 0); // Yellow for right hand
+          }
+
+          strokeWeight(4);
+          line(keypoint1.x, keypoint1.y, keypoint2.x, keypoint2.y);
+        }
+
         // Draw circles for all keypoints
         for (let i = 0; i < hand.keypoints.length; i++) {
           let keypoint = hand.keypoints[i];
